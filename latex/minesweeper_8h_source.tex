@@ -1,0 +1,53 @@
+\doxysection{minesweeper.\+h}
+\hypertarget{minesweeper_8h_source}{}\label{minesweeper_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_minesweeper}{Minesweeper}}\ \{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_minesweeper_1_1_cell}{Cell}}\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ x\ =\ 0;}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ y\ =\ 0;}
+\DoxyCodeLine{00016\ \ \ \ \ \};}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{class_minesweeper_a76b6264c03936dbc79738f5b2e22a548}{GameStatus}}\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ NOT\_STARTED,}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ IN\_PROGRESS,}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ VICTORY,}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ DEFEAT,}
+\DoxyCodeLine{00026\ \ \ \ \ \};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{using\ }RenderedField\ =\ std::vector<std::string>;}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{class_minesweeper}{Minesweeper}}(\textcolor{keywordtype}{size\_t}\ width,\ \textcolor{keywordtype}{size\_t}\ height,\ \textcolor{keywordtype}{size\_t}\ mines\_count);}
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{class_minesweeper}{Minesweeper}}(\textcolor{keywordtype}{size\_t}\ width,\ \textcolor{keywordtype}{size\_t}\ height,\ \textcolor{keyword}{const}\ std::vector<Cell>\&\ cells\_with\_mines);}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_minesweeper_aee4c21e4f724a0673d06144a352cb8e4}{NewGame}}(\textcolor{keywordtype}{size\_t}\ width,\ \textcolor{keywordtype}{size\_t}\ height,\ \textcolor{keywordtype}{size\_t}\ mines\_count);}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_minesweeper_aee4c21e4f724a0673d06144a352cb8e4}{NewGame}}(\textcolor{keywordtype}{size\_t}\ width,\ \textcolor{keywordtype}{size\_t}\ height,\ \textcolor{keyword}{const}\ std::vector<Cell>\&\ cells\_with\_mines);}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_minesweeper_aff46d4b896ec49ba751c7f0b0989dea6}{OpenCell}}(\textcolor{keyword}{const}\ Cell\&\ cell);}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_minesweeper_ae38a9dcd66f2d5a3f99e4c19a3490b80}{MarkCell}}(\textcolor{keyword}{const}\ Cell\&\ cell);}
+\DoxyCodeLine{00071\ \ \ \ \ \mbox{\hyperlink{class_minesweeper_a76b6264c03936dbc79738f5b2e22a548}{GameStatus}}\ \mbox{\hyperlink{class_minesweeper_adbc6e8afb78cbadf3ba6f84eb81a59e9}{GetGameStatus}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00076\ \ \ \ \ time\_t\ \mbox{\hyperlink{class_minesweeper_a11ff1dcc234602b00ae6750e890e742f}{GetGameTime}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00081\ \ \ \ \ RenderedField\ \mbox{\hyperlink{class_minesweeper_af0577c55f321d0342c0c8a893581ea7c}{RenderField}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<Cell>\&\ \mbox{\hyperlink{class_minesweeper_ac706b6ab6f8502b27d5d55a17f900e09}{GetMines}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keyword}{enum\ class}\ CellStatus\ \{}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ Opened,}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ Closed,}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ Marked,}
+\DoxyCodeLine{00089\ \ \ \ \ \};}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{void}\ RestartField();}
+\DoxyCodeLine{00100\ \ \ \ \ std::vector<Cell>\ CheckEnvironment(\textcolor{keywordtype}{size\_t}\ x,\ \textcolor{keywordtype}{size\_t}\ y);}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{void}\ StopGame(\mbox{\hyperlink{class_minesweeper_a76b6264c03936dbc79738f5b2e22a548}{GameStatus}}\ game\_status);}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \ \ \ \mbox{\hyperlink{class_minesweeper_a76b6264c03936dbc79738f5b2e22a548}{GameStatus}}\ game\_status\_\ =\ GameStatus::NOT\_STARTED;\ }
+\DoxyCodeLine{00108\ \ \ \ \ time\_t\ time\_\ =\ 0;\ }
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ width\_;\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ height\_;\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ cells\_count\_;\ }
+\DoxyCodeLine{00113\ \ \ \ \ std::vector<std::vector<char>>\ field\_;\ }
+\DoxyCodeLine{00114\ \ \ \ \ std::vector<std::vector<CellStatus>>\ opened\_;\ }
+\DoxyCodeLine{00115\ \ \ \ \ std::vector<Cell>\ mines\_;\ }
+\DoxyCodeLine{00116\ \};}
+
+\end{DoxyCode}

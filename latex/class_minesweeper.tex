@@ -1,0 +1,231 @@
+\doxysection{Minesweeper Class Reference}
+\hypertarget{class_minesweeper}{}\label{class_minesweeper}\index{Minesweeper@{Minesweeper}}
+
+
+Класс \doxylink{class_minesweeper}{Minesweeper} представляет игру Сапёр.  
+
+
+
+
+{\ttfamily \#include $<$minesweeper.\+h$>$}
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_minesweeper_1_1_cell}{Cell}}
+\begin{DoxyCompactList}\small\item\em Структура, представляющая координаты ячейки. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_minesweeper_a76b6264c03936dbc79738f5b2e22a548}\label{class_minesweeper_a76b6264c03936dbc79738f5b2e22a548} 
+enum class \mbox{\hyperlink{class_minesweeper_a76b6264c03936dbc79738f5b2e22a548}{Game\+Status}} \{ {\bfseries NOT\+\_\+\+STARTED}
+, {\bfseries IN\+\_\+\+PROGRESS}
+, {\bfseries VICTORY}
+, {\bfseries DEFEAT}
+ \}
+\begin{DoxyCompactList}\small\item\em Перечисление, представляющее возможные статусы игры. \end{DoxyCompactList}\item 
+\Hypertarget{class_minesweeper_aa55d2b5f0ffd008e5056fcdf780e6483}\label{class_minesweeper_aa55d2b5f0ffd008e5056fcdf780e6483} 
+using {\bfseries Rendered\+Field} = std\+::vector$<$ std\+::string $>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_minesweeper_a7ff196b6a9ab1151d508866e1a938cf1}{Minesweeper}} (size\+\_\+t width, size\+\_\+t height, size\+\_\+t mines\+\_\+count)
+\begin{DoxyCompactList}\small\item\em Конструктор класса \doxylink{class_minesweeper}{Minesweeper}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_minesweeper_adb04ef05efae6a8adeee41c11e4d1caa}{Minesweeper}} (size\+\_\+t width, size\+\_\+t height, const std\+::vector$<$ \mbox{\hyperlink{struct_minesweeper_1_1_cell}{Cell}} $>$ \&cells\+\_\+with\+\_\+mines)
+\begin{DoxyCompactList}\small\item\em Конструктор класса \doxylink{class_minesweeper}{Minesweeper}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_minesweeper_aee4c21e4f724a0673d06144a352cb8e4}{New\+Game}} (size\+\_\+t width, size\+\_\+t height, size\+\_\+t mines\+\_\+count)
+\begin{DoxyCompactList}\small\item\em Функция для начала новой игры. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_minesweeper_af22bac0a5796e1ab37d2d3299cecbbff}{New\+Game}} (size\+\_\+t width, size\+\_\+t height, const std\+::vector$<$ \mbox{\hyperlink{struct_minesweeper_1_1_cell}{Cell}} $>$ \&cells\+\_\+with\+\_\+mines)
+\begin{DoxyCompactList}\small\item\em Функция для начала новой игры. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_minesweeper_aff46d4b896ec49ba751c7f0b0989dea6}{Open\+Cell}} (const \mbox{\hyperlink{struct_minesweeper_1_1_cell}{Cell}} \&cell)
+\begin{DoxyCompactList}\small\item\em Функция для открытия ячейки. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_minesweeper_ae38a9dcd66f2d5a3f99e4c19a3490b80}{Mark\+Cell}} (const \mbox{\hyperlink{struct_minesweeper_1_1_cell}{Cell}} \&cell)
+\begin{DoxyCompactList}\small\item\em Функция для пометки ячейки флажком. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_minesweeper_a76b6264c03936dbc79738f5b2e22a548}{Game\+Status}} \mbox{\hyperlink{class_minesweeper_adbc6e8afb78cbadf3ba6f84eb81a59e9}{Get\+Game\+Status}} () const
+\begin{DoxyCompactList}\small\item\em Функция для получения текущего статуса игры. \end{DoxyCompactList}\item 
+time\+\_\+t \mbox{\hyperlink{class_minesweeper_a11ff1dcc234602b00ae6750e890e742f}{Get\+Game\+Time}} () const
+\begin{DoxyCompactList}\small\item\em Функция для получения времени игры. \end{DoxyCompactList}\item 
+Rendered\+Field \mbox{\hyperlink{class_minesweeper_af0577c55f321d0342c0c8a893581ea7c}{Render\+Field}} () const
+\begin{DoxyCompactList}\small\item\em Функция для отрисовки игрового поля. \end{DoxyCompactList}\item 
+const std\+::vector$<$ \mbox{\hyperlink{struct_minesweeper_1_1_cell}{Cell}} $>$ \& \mbox{\hyperlink{class_minesweeper_ac706b6ab6f8502b27d5d55a17f900e09}{Get\+Mines}} () const
+\begin{DoxyCompactList}\small\item\em Функция для получения координат мин. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс \doxylink{class_minesweeper}{Minesweeper} представляет игру Сапёр. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_minesweeper_a7ff196b6a9ab1151d508866e1a938cf1}\label{class_minesweeper_a7ff196b6a9ab1151d508866e1a938cf1} 
+\index{Minesweeper@{Minesweeper}!Minesweeper@{Minesweeper}}
+\index{Minesweeper@{Minesweeper}!Minesweeper@{Minesweeper}}
+\doxysubsubsection{\texorpdfstring{Minesweeper()}{Minesweeper()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Minesweeper\+::\+Minesweeper (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{width,  }\item[{size\+\_\+t}]{height,  }\item[{size\+\_\+t}]{mines\+\_\+count }\end{DoxyParamCaption})}
+
+
+
+Конструктор класса \doxylink{class_minesweeper}{Minesweeper}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Ширина игрового поля. \\
+\hline
+{\em height} & Высота игрового поля. \\
+\hline
+{\em mines\+\_\+count} & Количество мин на поле. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_minesweeper_adb04ef05efae6a8adeee41c11e4d1caa}\label{class_minesweeper_adb04ef05efae6a8adeee41c11e4d1caa} 
+\index{Minesweeper@{Minesweeper}!Minesweeper@{Minesweeper}}
+\index{Minesweeper@{Minesweeper}!Minesweeper@{Minesweeper}}
+\doxysubsubsection{\texorpdfstring{Minesweeper()}{Minesweeper()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Minesweeper\+::\+Minesweeper (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{width,  }\item[{size\+\_\+t}]{height,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{struct_minesweeper_1_1_cell}{Cell}} $>$ \&}]{cells\+\_\+with\+\_\+mines }\end{DoxyParamCaption})}
+
+
+
+Конструктор класса \doxylink{class_minesweeper}{Minesweeper}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Ширина игрового поля. \\
+\hline
+{\em height} & Высота игрового поля. \\
+\hline
+{\em cells\+\_\+with\+\_\+mines} & Вектор ячеек с минами. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_minesweeper_adbc6e8afb78cbadf3ba6f84eb81a59e9}\label{class_minesweeper_adbc6e8afb78cbadf3ba6f84eb81a59e9} 
+\index{Minesweeper@{Minesweeper}!GetGameStatus@{GetGameStatus}}
+\index{GetGameStatus@{GetGameStatus}!Minesweeper@{Minesweeper}}
+\doxysubsubsection{\texorpdfstring{GetGameStatus()}{GetGameStatus()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_minesweeper_a76b6264c03936dbc79738f5b2e22a548}{Minesweeper\+::\+Game\+Status}} Minesweeper\+::\+Get\+Game\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Функция для получения текущего статуса игры. 
+
+\begin{DoxyReturn}{Returns}
+Текущий статус игры. 
+\end{DoxyReturn}
+\Hypertarget{class_minesweeper_a11ff1dcc234602b00ae6750e890e742f}\label{class_minesweeper_a11ff1dcc234602b00ae6750e890e742f} 
+\index{Minesweeper@{Minesweeper}!GetGameTime@{GetGameTime}}
+\index{GetGameTime@{GetGameTime}!Minesweeper@{Minesweeper}}
+\doxysubsubsection{\texorpdfstring{GetGameTime()}{GetGameTime()}}
+{\footnotesize\ttfamily time\+\_\+t Minesweeper\+::\+Get\+Game\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Функция для получения времени игры. 
+
+\begin{DoxyReturn}{Returns}
+Время игры в секундах.
+
+Время игры. 
+\end{DoxyReturn}
+\Hypertarget{class_minesweeper_ac706b6ab6f8502b27d5d55a17f900e09}\label{class_minesweeper_ac706b6ab6f8502b27d5d55a17f900e09} 
+\index{Minesweeper@{Minesweeper}!GetMines@{GetMines}}
+\index{GetMines@{GetMines}!Minesweeper@{Minesweeper}}
+\doxysubsubsection{\texorpdfstring{GetMines()}{GetMines()}}
+{\footnotesize\ttfamily const std\+::vector$<$ \mbox{\hyperlink{struct_minesweeper_1_1_cell}{Minesweeper\+::\+Cell}} $>$ \& Minesweeper\+::\+Get\+Mines (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Функция для получения координат мин. 
+
+\begin{DoxyReturn}{Returns}
+Вектор ячейк, возвращаемых координаты мин. 
+\end{DoxyReturn}
+\Hypertarget{class_minesweeper_ae38a9dcd66f2d5a3f99e4c19a3490b80}\label{class_minesweeper_ae38a9dcd66f2d5a3f99e4c19a3490b80} 
+\index{Minesweeper@{Minesweeper}!MarkCell@{MarkCell}}
+\index{MarkCell@{MarkCell}!Minesweeper@{Minesweeper}}
+\doxysubsubsection{\texorpdfstring{MarkCell()}{MarkCell()}}
+{\footnotesize\ttfamily void Minesweeper\+::\+Mark\+Cell (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_minesweeper_1_1_cell}{Cell}} \&}]{cell }\end{DoxyParamCaption})}
+
+
+
+Функция для пометки ячейки флажком. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cell} & Координаты ячейки для пометки. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_minesweeper_af22bac0a5796e1ab37d2d3299cecbbff}\label{class_minesweeper_af22bac0a5796e1ab37d2d3299cecbbff} 
+\index{Minesweeper@{Minesweeper}!NewGame@{NewGame}}
+\index{NewGame@{NewGame}!Minesweeper@{Minesweeper}}
+\doxysubsubsection{\texorpdfstring{NewGame()}{NewGame()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Minesweeper\+::\+New\+Game (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{width,  }\item[{size\+\_\+t}]{height,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{struct_minesweeper_1_1_cell}{Cell}} $>$ \&}]{cells\+\_\+with\+\_\+mines }\end{DoxyParamCaption})}
+
+
+
+Функция для начала новой игры. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Ширина игрового поля. \\
+\hline
+{\em height} & Высота игрового поля. \\
+\hline
+{\em cells\+\_\+with\+\_\+mines} & Вектор ячеек с минами. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_minesweeper_aee4c21e4f724a0673d06144a352cb8e4}\label{class_minesweeper_aee4c21e4f724a0673d06144a352cb8e4} 
+\index{Minesweeper@{Minesweeper}!NewGame@{NewGame}}
+\index{NewGame@{NewGame}!Minesweeper@{Minesweeper}}
+\doxysubsubsection{\texorpdfstring{NewGame()}{NewGame()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Minesweeper\+::\+New\+Game (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{width,  }\item[{size\+\_\+t}]{height,  }\item[{size\+\_\+t}]{mines\+\_\+count }\end{DoxyParamCaption})}
+
+
+
+Функция для начала новой игры. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Ширина игрового поля. \\
+\hline
+{\em height} & Высота игрового поля. \\
+\hline
+{\em mines\+\_\+count} & Количество мин на поле. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_minesweeper_aff46d4b896ec49ba751c7f0b0989dea6}\label{class_minesweeper_aff46d4b896ec49ba751c7f0b0989dea6} 
+\index{Minesweeper@{Minesweeper}!OpenCell@{OpenCell}}
+\index{OpenCell@{OpenCell}!Minesweeper@{Minesweeper}}
+\doxysubsubsection{\texorpdfstring{OpenCell()}{OpenCell()}}
+{\footnotesize\ttfamily void Minesweeper\+::\+Open\+Cell (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_minesweeper_1_1_cell}{Cell}} \&}]{cell }\end{DoxyParamCaption})}
+
+
+
+Функция для открытия ячейки. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cell} & Координаты ячейки для открытия. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_minesweeper_af0577c55f321d0342c0c8a893581ea7c}\label{class_minesweeper_af0577c55f321d0342c0c8a893581ea7c} 
+\index{Minesweeper@{Minesweeper}!RenderField@{RenderField}}
+\index{RenderField@{RenderField}!Minesweeper@{Minesweeper}}
+\doxysubsubsection{\texorpdfstring{RenderField()}{RenderField()}}
+{\footnotesize\ttfamily Minesweeper\+::\+Rendered\+Field Minesweeper\+::\+Render\+Field (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Функция для отрисовки игрового поля. 
+
+Функция для отображения игрового поля.
+
+\begin{DoxyReturn}{Returns}
+Вектор строк, представляющих отрисованное игровое поле.
+
+Вектор строк, представляющих игровое поле. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+minesweeper.\+h\item 
+minesweeper.\+cpp\end{DoxyCompactItemize}
